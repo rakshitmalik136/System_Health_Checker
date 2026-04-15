@@ -69,7 +69,7 @@ CPU Usage: 91%
 Memory Usage: 65%
 Disk Usage: 88%
 
-🚨 ALERT: HIGH RESOURCE USAGE 🚨
+ALERT: HIGH RESOURCE USAGE
 CPU Usage is above 80% (Current: 91%)
 
 Time: Wed Apr 15 10:40:00 IST 2026
