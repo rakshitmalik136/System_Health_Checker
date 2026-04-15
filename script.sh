@@ -1,12 +1,17 @@
 #!/bin/bash
 
+LOG_FILE="$HOME/system_health.log"
+
+exec >> $LOG_FILE
+exec 2>&1
+
 echo "===== SYSTEM HEALTH REPORT ====="
 echo ""
 
 #Thresholds
 CPU_LIMIT=80
 MEM_LIMIT=80
-DISK_LIMIT=50
+DISK_LIMIT=85
 
 # CPU Usage
 CPU=$(vmstat 1 2 | tail -1 | awk '{print 100 - $15}')
@@ -43,7 +48,7 @@ else
 fi
 
 #Disk check
-if [ $DISK -gt 50 ];
+if [ $DISK -gt 85 ];
 then
 	echo "Disk almost full"
 	ALERT=1
