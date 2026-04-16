@@ -55,7 +55,7 @@ chmod +x script.sh
 
 ```bash
 crontab -e
-*/5 * * * * /home/user/health_check.sh
+*/5 * * * * /home/user/script.sh
 ```
 
 ---
